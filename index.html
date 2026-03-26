@@ -1,21 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Embedded Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearningHub AI</title>
+
   <style>
-    body, html {
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
+
+    body {
+      background: #0b0f1a;
+      color: white;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #0d1324;
+      border-bottom: 1px solid #1f2a44;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #8b5cf6;
+    }
+
+    .btn {
+      background: #7c3aed;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #6d28d9;
+    }
+
+    /* Loader */
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      opacity: 0.7;
+    }
+
+    /* Iframe */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 70px);
+    }
+
     iframe {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       border: none;
     }
   </style>
 </head>
+
 <body>
-  <iframe src="https://650b625e-caef-41a6-99b9-40ad3357de3c-00-26xgwm8g7apio.janeway.replit.dev/"></iframe>
+
+  <div class="header">
+    <div class="logo">🚀 LearningHub AI</div>
+    <a class="btn" href="https://650b625e-caef-41a6-99b9-40ad3357de3c-00-26xgwm8g7apio.janeway.replit.dev/" target="_blank">
+      Open Full Site
+    </a>
+  </div>
+
+  <div class="iframe-container">
+    <div class="loader" id="loader">Loading your AI workspace...</div>
+
+    <iframe 
+      src="https://650b625e-caef-41a6-99b9-40ad3357de3c-00-26xgwm8g7apio.janeway.replit.dev/"
+      onload="document.getElementById('loader').style.display='none';">
+    </iframe>
+  </div>
+
 </body>
 </html>
