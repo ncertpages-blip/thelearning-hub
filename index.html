@@ -132,27 +132,19 @@
     }
 
     .search-input {
-      width: 70%;
+      width: 100%;
       padding: 12px;
-      border-radius: 30px 0 0 30px;
+      border-radius: 30px;
       border: none;
       outline: none;
       font-size: 16px;
-    }
-
-    .search-button {
-      width: 28%;
-      border-radius: 0 30px 30px 0;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
+      margin-bottom: 10px;
     }
 
     /* Deep Learn Button */
     .deep-learn-button {
-      margin-top: 15px;
       display: inline-block;
-      padding: 10px 25px;
+      padding: 10px 40px;
       font-weight: 600;
     }
 
@@ -182,13 +174,9 @@
     deep learning insights, and smart content discovery.
   </p>
 
-  <!-- Search bar with Search + Deep Learn -->
+  <!-- Search bar with only Deep Learn -->
   <div class="search-container">
     <input type="text" placeholder="Ask anything (e.g. Quantum Computing, French Revolution)..." class="search-input" id="searchInput" />
-
-    <button class="search-button" onclick="alert('Search functionality not implemented')">Search</button>
-
-    <br />
 
     <button class="deep-learn-button" onclick="scrollToEmbed()">🧠 Deep Learn</button>
   </div>
