@@ -89,6 +89,11 @@
       color: white;
       border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 600;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #7a3ddb, #3fa9e8);
     }
 
     /* INPUT */
@@ -118,6 +123,39 @@
       color: #888;
       margin-top: 40px;
     }
+
+    /* Search bar container */
+    .search-container {
+      max-width: 600px;
+      margin: 20px auto 0;
+      text-align: center;
+    }
+
+    .search-input {
+      width: 70%;
+      padding: 12px;
+      border-radius: 30px 0 0 30px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-button {
+      width: 28%;
+      border-radius: 0 30px 30px 0;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Deep Learn Button */
+    .deep-learn-button {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 25px;
+      font-weight: 600;
+    }
+
   </style>
 </head>
 
@@ -143,6 +181,17 @@
     students, developers, and professionals explore knowledge faster using AI search,
     deep learning insights, and smart content discovery.
   </p>
+
+  <!-- Search bar with Search + Deep Learn -->
+  <div class="search-container">
+    <input type="text" placeholder="Ask anything (e.g. Quantum Computing, French Revolution)..." class="search-input" id="searchInput" />
+
+    <button class="search-button" onclick="alert('Search functionality not implemented')">Search</button>
+
+    <br />
+
+    <button class="deep-learn-button" onclick="scrollToEmbed()">🧠 Deep Learn</button>
+  </div>
 </div>
 
 <!-- ABOUT -->
@@ -216,7 +265,7 @@
 </div>
 
 <!-- EMBED -->
-<div class="card">
+<div id="embed" class="card">
   <h2>Start Learning</h2>
   <iframe src="https://gemini-serp-ai--karanns.replit.app/"></iframe>
 </div>
@@ -230,8 +279,7 @@
   <button>Send Message</button>
 
   <p style="margin-top:15px;">
-    📧 Email: support@learninghub.ai<br>
-    📞 Phone: +91 9876543210
+    📧 Email: support@learninghub.eu.cc
   </p>
 </div>
 
@@ -239,6 +287,16 @@
 <footer>
   <p>© 2026 LearningHub AI | Built with AI 🚀</p>
 </footer>
+
+<script>
+  // Scroll to embedded tool when clicking Deep Learn button
+  function scrollToEmbed() {
+    const embedSection = document.getElementById('embed');
+    if (embedSection) {
+      embedSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
 
 </body>
 </html>
