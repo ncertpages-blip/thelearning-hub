@@ -1,6 +1,8 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LearningHub AI</title>
 
   <style>
@@ -15,9 +17,11 @@
     .navbar {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 15px 40px;
       background: #070b1f;
       border-bottom: 1px solid rgba(255,255,255,0.05);
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -26,10 +30,17 @@
       color: #9b5cff;
     }
 
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .nav-links a {
       margin-left: 20px;
       text-decoration: none;
       color: #ccc;
+      margin-top: 5px;
     }
 
     .nav-links a:hover {
@@ -89,9 +100,9 @@
       color: white;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
       font-weight: 600;
     }
+
     button:hover {
       background: linear-gradient(90deg, #7a3ddb, #3fa9e8);
     }
@@ -124,7 +135,7 @@
       margin-top: 40px;
     }
 
-    /* Search bar container */
+    /* SEARCH */
     .search-container {
       max-width: 600px;
       margin: 20px auto 0;
@@ -141,11 +152,70 @@
       margin-bottom: 10px;
     }
 
-    /* Deep Learn Button */
     .deep-learn-button {
-      display: inline-block;
       padding: 10px 40px;
-      font-weight: 600;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+
+      .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 5px 10px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+
+      .box {
+        width: 90%;
+      }
+
+      .card {
+        margin: 15px 10px;
+      }
+
+      iframe {
+        height: 60vh;
+      }
+    }
+
+    /* EXTRA SMALL */
+    @media (max-width: 480px) {
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .search-input {
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .deep-learn-button {
+        width: 100%;
+      }
     }
 
   </style>
@@ -174,10 +244,8 @@
     deep learning insights, and smart content discovery.
   </p>
 
-  <!-- Search bar with only Deep Learn -->
   <div class="search-container">
-    <input type="text" placeholder="Ask anything (e.g. Quantum Computing, French Revolution)..." class="search-input" id="searchInput" />
-
+    <input type="text" placeholder="Ask anything..." class="search-input">
     <button class="deep-learn-button" onclick="scrollToEmbed()">🧠 Deep Learn</button>
   </div>
 </div>
@@ -185,42 +253,31 @@
 <!-- ABOUT -->
 <div id="about" class="card">
   <h2>About LearningHub AI</h2>
-  <p>
-    LearningHub AI combines artificial intelligence with modern education tools
-    to provide a seamless and powerful learning experience. Users can search across
-    web, videos, PDFs, and images while also getting AI-generated explanations.
-  </p>
-
-  <p>
-    Our mission is to simplify knowledge discovery and make high-quality education
-    accessible to everyone through cutting-edge AI technologies.
-  </p>
+  <p>AI-powered learning platform for students and developers.</p>
 </div>
 
 <!-- FEATURES -->
 <div class="grid">
   <div class="card box">
     <h2>🔍 Smart Search</h2>
-    <p>Search across Google, YouTube, PDFs, and more in one place.</p>
+    <p>Search everything in one place.</p>
   </div>
 
   <div class="card box">
     <h2>🧠 AI Overview</h2>
-    <p>Get instant AI-generated summaries and explanations.</p>
+    <p>Instant explanations.</p>
   </div>
 
   <div class="card box">
     <h2>📚 Deep Learning</h2>
-    <p>Dive deeper into topics with structured knowledge paths.</p>
+    <p>Structured knowledge paths.</p>
   </div>
 </div>
 
 <!-- BLOGS -->
 <div id="blogs" class="card">
   <h2>Latest Blogs</h2>
-  <p><b>1.</b> What is Machine Learning and how it works?</p>
-  <p><b>2.</b> Top AI tools for students in 2026</p>
-  <p><b>3.</b> Future of AI in Education</p>
+  <p>AI, ML, Future Tech</p>
 </div>
 
 <!-- PRICING -->
@@ -228,19 +285,16 @@
   <div class="card box">
     <h2>Free</h2>
     <p>₹0/month</p>
-    <p>Basic AI access</p>
   </div>
 
   <div class="card box">
     <h2>Pro</h2>
     <p>₹299/month</p>
-    <p>Unlimited queries</p>
   </div>
 
   <div class="card box">
     <h2>Premium</h2>
     <p>₹599/month</p>
-    <p>Advanced AI tools</p>
   </div>
 </div>
 
@@ -260,31 +314,24 @@
 
 <!-- CONTACT -->
 <div id="contact" class="card">
-  <h2>Contact Us</h2>
-  <input type="text" placeholder="Your Name">
-  <input type="email" placeholder="Your Email">
-  <textarea placeholder="Your Message"></textarea>
-  <button>Send Message</button>
-
-  <p style="margin-top:15px;">
-    📧 Email: support@learninghub.eu.cc
-  </p>
+  <h2>Contact</h2>
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Email">
+  <textarea placeholder="Message"></textarea>
+  <button>Send</button>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 LearningHub AI | Built with AI 🚀</p>
+  <p>© 2026 LearningHub AI 🚀</p>
 </footer>
 
 <script>
-  // Scroll to embedded tool when clicking Deep Learn button
-  function scrollToEmbed() {
-    const embedSection = document.getElementById('embed');
-    if (embedSection) {
-      embedSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+function scrollToEmbed() {
+  document.getElementById('embed').scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 </body>
 </html>
+```
