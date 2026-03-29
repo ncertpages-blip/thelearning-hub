@@ -1,158 +1,243 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Learning Hub</title>
+  <title>LearningHub AI</title>
+
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #eef3fb;
+      font-family: 'Segoe UI', sans-serif;
+      background: #050816;
+      color: #e6e6f0;
     }
 
-    header {
-      background-color: #1e88e5;
-      color: white;
-      padding: 20px;
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: #070b1f;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #9b5cff;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    .nav-links a:hover {
+      color: #9b5cff;
+    }
+
+    /* HERO */
+    .hero {
       text-align: center;
+      padding: 60px 20px;
     }
 
-    .container {
-      padding: 20px;
-      max-width: 1000px;
+    .hero h1 {
+      font-size: 42px;
+      background: linear-gradient(90deg, #9b5cff, #5ecbff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #aaa;
+      max-width: 600px;
       margin: auto;
     }
 
+    /* CARD */
     .card {
-      background: white;
+      background: #0c1027;
+      border: 1px solid rgba(155,92,255,0.2);
+      border-radius: 12px;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border-left: 5px solid #1e88e5;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 20px;
+      box-shadow: 0 0 20px rgba(155,92,255,0.1);
     }
 
-    .pricing {
+    /* GRID */
+    .grid {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .plan {
-      flex: 1;
-      min-width: 250px;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      border-top: 5px solid #1e88e5;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .box {
+      width: 280px;
+      margin: 15px;
     }
 
-    .plan h3 {
-      color: #1565c0;
+    h2 {
+      color: #9b5cff;
     }
 
-    input {
+    /* BUTTON */
+    button {
+      background: linear-gradient(90deg, #9b5cff, #5ecbff);
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* INPUT */
+    input, textarea {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background-color: #1e88e5;
+      margin: 8px 0;
+      background: #050816;
+      border: 1px solid #333;
       color: white;
-      padding: 12px;
-      border: none;
-      width: 100%;
       border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
     }
 
-    button:hover {
-      background-color: #1565c0;
-    }
-
+    /* IFRAME */
     iframe {
       width: 100%;
       height: 80vh;
       border: none;
       border-radius: 10px;
-      margin-top: 10px;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 15px;
-      background: #1e88e5;
-      color: white;
-      margin-top: 20px;
+      padding: 20px;
+      background: #070b1f;
+      color: #888;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Learning Hub</h1>
-  <p>Smart AI Learning Platform</p>
-</header>
-
-<div class="container">
-
-  <!-- About -->
-  <div class="card">
-    <h2>About Learning Hub</h2>
-    <p>
-      Learning Hub helps you explore AI-powered tools to study smarter,
-      faster, and more effectively.
-    </p>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">LearningHub AI</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#blogs">Blogs</a>
+    <a href="#contact">Contact</a>
+    <a href="#login">Login</a>
   </div>
-
-  <!-- Pricing -->
-  <div class="pricing">
-    <div class="plan">
-      <h3>Free</h3>
-      <p><strong>₹0/month</strong></p>
-      <p>Basic AI access<br>Limited usage</p>
-    </div>
-
-    <div class="plan">
-      <h3>Pro</h3>
-      <p><strong>₹299/month</strong></p>
-      <p>Unlimited usage<br>Faster responses</p>
-    </div>
-
-    <div class="plan">
-      <h3>Premium</h3>
-      <p><strong>₹599/month</strong></p>
-      <p>Advanced tools<br>Priority support</p>
-    </div>
-  </div>
-
-  <!-- Login -->
-  <div class="card">
-    <h2>Login</h2>
-    <form>
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-
-  <!-- Embedded Site -->
-  <div class="card">
-    <h2>Start Learning</h2>
-    <iframe src="https://gemini-serp-ai--karanns.replit.app/"></iframe>
-  </div>
-
 </div>
 
+<!-- HERO -->
+<div class="hero">
+  <h1>AI-Powered Learning Platform</h1>
+  <p>
+    LearningHub AI is a next-generation intelligent learning platform that helps
+    students, developers, and professionals explore knowledge faster using AI search,
+    deep learning insights, and smart content discovery.
+  </p>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="card">
+  <h2>About LearningHub AI</h2>
+  <p>
+    LearningHub AI combines artificial intelligence with modern education tools
+    to provide a seamless and powerful learning experience. Users can search across
+    web, videos, PDFs, and images while also getting AI-generated explanations.
+  </p>
+
+  <p>
+    Our mission is to simplify knowledge discovery and make high-quality education
+    accessible to everyone through cutting-edge AI technologies.
+  </p>
+</div>
+
+<!-- FEATURES -->
+<div class="grid">
+  <div class="card box">
+    <h2>🔍 Smart Search</h2>
+    <p>Search across Google, YouTube, PDFs, and more in one place.</p>
+  </div>
+
+  <div class="card box">
+    <h2>🧠 AI Overview</h2>
+    <p>Get instant AI-generated summaries and explanations.</p>
+  </div>
+
+  <div class="card box">
+    <h2>📚 Deep Learning</h2>
+    <p>Dive deeper into topics with structured knowledge paths.</p>
+  </div>
+</div>
+
+<!-- BLOGS -->
+<div id="blogs" class="card">
+  <h2>Latest Blogs</h2>
+  <p><b>1.</b> What is Machine Learning and how it works?</p>
+  <p><b>2.</b> Top AI tools for students in 2026</p>
+  <p><b>3.</b> Future of AI in Education</p>
+</div>
+
+<!-- PRICING -->
+<div class="grid">
+  <div class="card box">
+    <h2>Free</h2>
+    <p>₹0/month</p>
+    <p>Basic AI access</p>
+  </div>
+
+  <div class="card box">
+    <h2>Pro</h2>
+    <p>₹299/month</p>
+    <p>Unlimited queries</p>
+  </div>
+
+  <div class="card box">
+    <h2>Premium</h2>
+    <p>₹599/month</p>
+    <p>Advanced AI tools</p>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="card">
+  <h2>Login</h2>
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button>Login</button>
+</div>
+
+<!-- EMBED -->
+<div class="card">
+  <h2>Start Learning</h2>
+  <iframe src="https://gemini-serp-ai--karanns.replit.app/"></iframe>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="card">
+  <h2>Contact Us</h2>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Your Message"></textarea>
+  <button>Send Message</button>
+
+  <p style="margin-top:15px;">
+    📧 Email: support@learninghub.ai<br>
+    📞 Phone: +91 9876543210
+  </p>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Learning Hub</p>
+  <p>© 2026 LearningHub AI | Built with AI 🚀</p>
 </footer>
 
 </body>
