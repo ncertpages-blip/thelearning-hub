@@ -6,16 +6,154 @@
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
     }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border-left: 5px solid #4CAF50;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .pricing {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      flex: 1;
+      min-width: 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border-top: 5px solid #4CAF50;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .plan h3 {
+      color: #2e7d32;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
     iframe {
       width: 100%;
-      height: 100vh;
+      height: 80vh;
       border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2e7d32;
+      color: white;
+      margin-top: 20px;
     }
   </style>
 </head>
+
 <body>
-  <iframe src="https://gemini-serp-ai--karanns.replit.app/"></iframe>
+
+<header>
+  <h1>Learning Hub</h1>
+  <p>Smart AI Learning Platform</p>
+</header>
+
+<div class="container">
+
+  <!-- About -->
+  <div class="card">
+    <h2>About Learning Hub</h2>
+    <p>
+      Learning Hub helps you explore AI-powered tools to study smarter.
+      Practice, search, and learn — all in one place.
+    </p>
+  </div>
+
+  <!-- Pricing -->
+  <div class="pricing">
+    <div class="plan">
+      <h3>Free</h3>
+      <p><strong>₹0/month</strong></p>
+      <p>Basic AI access<br>Limited usage</p>
+    </div>
+
+    <div class="plan">
+      <h3>Pro</h3>
+      <p><strong>₹299/month</strong></p>
+      <p>Unlimited usage<br>Faster results</p>
+    </div>
+
+    <div class="plan">
+      <h3>Premium</h3>
+      <p><strong>₹599/month</strong></p>
+      <p>Advanced AI tools<br>Priority support</p>
+    </div>
+  </div>
+
+  <!-- Login -->
+  <div class="card">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Embedded Site -->
+  <div class="card">
+    <h2>Start Learning</h2>
+    <iframe src="https://gemini-serp-ai--karanns.replit.app/"></iframe>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Learning Hub</p>
+</footer>
+
 </body>
 </html>
